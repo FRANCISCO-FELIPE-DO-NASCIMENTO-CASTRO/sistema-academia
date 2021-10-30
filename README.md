@@ -8,9 +8,9 @@ Cria um ambiente de desenvolvimento para instalar as dependencia
     python -m venv venv
 ```
 
-roda este comando no terminal para executar o 
+executa este comando no terminal para ativar a virtualenv
 ```bash
-venv\Scripts\
+venv\Scripts\activate
 ```
 
 Agora faça instalação das dependencias

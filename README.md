@@ -1,12 +1,16 @@
 # sistema-academia
 Sistema que contenha os dados cadastrais do aluno, bem como as informações dos pagamentos das mensalidades.
 
-## Instalação
-    1 - git clone https://github.com/FRANCISCO-FELIPE-DO-NASCIMENTO-CASTRO/sistema-academia.git
-    2 cd sistema-academia
-    3 Crie um habiente de desenvolvimento
+## Instalação 
     
 ```bash
+Executa o cmd dentro da rais do projeto
+Cria um hambiente de desenvolvimento para instalar as dependencia
 python -m venv venv
+Execulta este comando no terminal para executar 
+venv\Scripts\
+Agora faça instalação das dependencias
 pip install -r requirements.txt
+Execulta o main.py
+python main.py
 ```

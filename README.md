@@ -6,6 +6,6 @@ Sistema que contenha os dados cadastrais do aluno, bem como as informações dos
     2 cd sistema-academia
     3 Crie um habiente de desenvolvimento
     
-```bash
-python -m venv venv
-```
+    ```bash
+    python -m venv venv
+    ```

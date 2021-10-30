@@ -10,9 +10,9 @@ roda este comando no terminal para executar o virtualenv
     venv\Scripts\activate
 
 Agora faça instalação das dependencias
-'''bash
-    pip install -r requirements.txt
-'''
+```bash
+pip install -r requirements.txt
+```
 
 Execulta o main.py
     python main.py

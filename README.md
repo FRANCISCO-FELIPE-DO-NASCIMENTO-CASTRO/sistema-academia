@@ -8,4 +8,5 @@ Sistema que contenha os dados cadastrais do aluno, bem como as informações dos
     
 ```bash
 python -m venv venv
+pip install -r requirements.txt
 ```

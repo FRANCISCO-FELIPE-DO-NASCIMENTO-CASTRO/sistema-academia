@@ -1,30 +1,28 @@
-import os
-import sys
-from qt_core import *
-from database.connection import create_connection
 
-from PySide6.QtWidgets import QApplication, QMainWindow
-# Importacao da janela principal
-from interfaces.janelas.principal import Ui_tela_principal
+from classes.aluno import Aluno
+from classes.plano import Plano
+from classes.especialidade import Especialidade
+from classes.instrutor import Instrutor
 
-# Classe para exibição da janela
-class JanelaPrincipal(QMainWindow):
-    def __init__(self):
-        super().__init__()
+musculacao = Especialidade('Musculação')
 
-        # Titulo da janela principal
-        self.setWindowTitle('Sistema Academia')
+instrutor = Instrutor('Paulo Cintura', '014.545.788-78', 2500)
+instrutor.adicionar_especialidade(musculacao)
 
-        # Importando as configuraçoes da janela principal
-        self.ui = Ui_tela_principal()
-        self.ui.configuracao(self)
-        conn = create_connection()
-        print(conn)
+print(instrutor)
 
-        # Exibe a janela
-        self.show()
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    janela = JanelaPrincipal()
-    sys.exit(app.exec())
+
+aluno = Aluno('Francisco Araujo', '017.514.894-78', 'F','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'francisco@hotmail.com', '1212121')
+aluno2 = Aluno('Rogerio Sousa', '017.514.894-78', 'F','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'francisco@hotmail.com', '1212121')
+aluno3 = Aluno('Maria Rosa', '017.514.894-78', 'F','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'francisco@hotmail.com', '1212121')
+
+plano_smart = Plano('Plano Smart',
+ 'Treine o quanto quiser na sua unidade, sem taxa de cancelamento.',79.90)
+
+plano_smart.matricular_aluno(aluno)
+plano_smart.matricular_aluno(aluno2)
+plano_smart.matricular_aluno(aluno3)
+
+
+print(plano_smart)

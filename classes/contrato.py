@@ -7,4 +7,4 @@ class Contrato:
         self.cliente = Cliente
         self.plano = Plano
         self.funcionario = Funcionario
-        self.meio_pagamento = MeiosDePagamento
+        self.meio_pagamento = []

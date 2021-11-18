@@ -3,6 +3,7 @@ from classes.aluno import Aluno
 from classes.plano import Plano
 from classes.especialidade import Especialidade
 from classes.instrutor import Instrutor
+from classes.matricula import Matricula
 
 musculacao = Especialidade('Musculação')
 
@@ -19,6 +20,9 @@ aluno3 = Aluno('Maria Rosa', '017.514.894-78', 'F','64060-115', 'Q C', '50',' Vi
 
 plano_smart = Plano('Plano Smart',
  'Treine o quanto quiser na sua unidade, sem taxa de cancelamento.',79.90)
+
+matricula = Matricula(1)
+matricula.gerar_comprovante()
 
 plano_smart.matricular_aluno(aluno)
 plano_smart.matricular_aluno(aluno2)

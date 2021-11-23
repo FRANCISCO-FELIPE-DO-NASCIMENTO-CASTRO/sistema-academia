@@ -25,5 +25,6 @@ for reg in registros:
 
 # gravação no banco de dados. sem commit os dados não são gravados.
 conexão.commit()
+
 cursor.close()
 conexão.close()

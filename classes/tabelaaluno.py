@@ -14,7 +14,7 @@ sql = 'create table aluno('\
       'cidade varchar (30),'\
       'estado varchar (30),'\
       'telefone varchar (30),'\
-      'email varchar (50),'\
+      'email varchar (50))'
 
 cursor.execute(sql)
 # sentença sql para inserir registros

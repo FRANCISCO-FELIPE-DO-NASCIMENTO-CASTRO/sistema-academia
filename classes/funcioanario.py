@@ -1,7 +1,7 @@
+from classes.pessoa import Pessoa
 
-
-class Funcionario:
-    def __init__(self, id, nome, endereco, bairro, cep, cidade, estado, telefone, sexo, cref, nascimento, email,
-    funcao, dataAdmisao, salario, dataDemissao, situacao, login, senha):
-       
+class Funcionario(Pessoa):
+    def __init__(self, nome, cpf, sexo, cep, endereco, numero, complemento, cidade, estado, telefone, email,data_admissão):
+        super().__init__(nome, cpf, sexo, cep, endereco, numero, complemento, cidade, estado, telefone, email)
+        self.data_admissão = data_admissão
 

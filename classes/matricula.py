@@ -1,4 +1,3 @@
-
 class Matricula:
     def __init__(self, id): #dataAtual, plano, vencimento, desconto, valorFinal, situacao, dataFim, aluno=None):
         self.__id = id

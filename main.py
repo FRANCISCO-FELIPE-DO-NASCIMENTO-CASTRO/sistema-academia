@@ -40,6 +40,6 @@ aluno2 = Aluno('Isaac Nunes dos Santos', '017.514.894-78', 'F','64060-115', 'Q C
 
 
 controller = Controller()
-# controller.criar_banco()
+controller.criar_banco()
 # controller.adiciona_aluno(aluno)
 controller.adiciona_aluno(aluno2)

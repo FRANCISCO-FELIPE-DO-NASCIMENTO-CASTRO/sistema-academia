@@ -1,3 +1,4 @@
+from sqlite3.dbapi2 import connect
 from database.conexao import criar_conexao
 
 
@@ -39,7 +40,13 @@ class Model:
         conn.close()
 
     def listar(self):
-        pass
+        conn = criar_conexao()
+        cursor = conn.cursor()
+        cursor.execute('select * from aluno')
+
+        linhas = cursor.fetchall()
+        return linhas
+
 
 
     def atualizar(self):

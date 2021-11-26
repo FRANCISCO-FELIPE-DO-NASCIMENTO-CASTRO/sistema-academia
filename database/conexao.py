@@ -1,6 +1,13 @@
 #coding: utf-8
 import sqlite3
 
+def criar_banco():
+    conn = sqlite3.connect('./database/academia.db')
+    print("Banco criado com sucesso")
+    return conn
+
+
+
 def criar_conexao():
     conn = None
     try:

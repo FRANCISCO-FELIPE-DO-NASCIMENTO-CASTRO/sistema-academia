@@ -12,8 +12,8 @@ class Controller:
     def adiciona_aluno(self, aluno):        
         self.model.salvar(aluno)
 
-    def listar(self, aluno):        
-        self.model.salvar(aluno)
+    def listar(self):        
+        self.view.lista_cliente()
 
     def atualizar(self, aluno):        
         self.model.salvar(aluno)

@@ -1,4 +1,4 @@
-from typing import Tuple
+
 from mysql import connector
 from mysql.connector import connection
 

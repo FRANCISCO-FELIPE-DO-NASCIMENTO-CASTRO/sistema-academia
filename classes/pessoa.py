@@ -1,16 +1,16 @@
 class Pessoa:
     def __init__(self, nome, cpf, sexo, cep, endereco, numero, complemento, cidade, estado, telefone, email ):
         self.__nome = nome
-        self.cpf = cpf,
-        self.sexo = sexo
-        self.cep = cep
-        self.endereco = endereco 
-        self.numero = numero 
-        self.complemento = complemento 
-        self.cidade = cidade
-        self.estado = estado
-        self.telefone = telefone 
-        self.email = email
+        self.__cpf = cpf,
+        self.__sexo = sexo
+        self.__cep = cep
+        self.__endereco = endereco 
+        self.__numero = numero 
+        self.__complemento = complemento 
+        self.__cidade = cidade
+        self.__estado = estado
+        self.__telefone = telefone 
+        self.__email = email
 
     @property
     def nome(self):

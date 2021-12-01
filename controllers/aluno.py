@@ -8,16 +8,13 @@ class Controller:
         self.model = Aluno()
         self.view = AlunoView()
     
-    def criar_banco(self):
-        pass
-
-         
+  
         
     def adiciona_aluno(self, aluno):        
         self.model.salvar(aluno)
 
-    def listar_clientes(self):        
-        self.view.lista_cliente()
+    def listar_aluno(self):        
+        self.view.listar_alunos()
 
     def atualizar(self, aluno):        
         self.model.salvar(aluno)

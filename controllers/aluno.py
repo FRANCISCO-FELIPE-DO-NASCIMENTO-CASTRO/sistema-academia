@@ -1,18 +1,22 @@
-from models.aluno import Model
-from views.cliente import View
+
+from models.aluno import Aluno
+from views.aluno import AlunoView
 
 class Controller:
     def __init__(self):
-        self.model = Model()
-        self.view = View()
-
+       
+        self.model = Aluno()
+        self.view = AlunoView()
+    
     def criar_banco(self):
-        self.model.criar_tabela_aluno()
+        pass
+
+         
         
     def adiciona_aluno(self, aluno):        
         self.model.salvar(aluno)
 
-    def listar(self):        
+    def listar_clientes(self):        
         self.view.lista_cliente()
 
     def atualizar(self, aluno):        

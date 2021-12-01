@@ -13,7 +13,7 @@ class Instrutor:
     
     def adicionar_especialidade(self, especialidade):
         self.__especialidade.append(especialidade)
-        print('Adicionado com sucesso')
+        print('Especialidade adicionada com sucesso')
 
     def remove_especialidade(self, especialidade):
         self.__especialidade.remove(especialidade)

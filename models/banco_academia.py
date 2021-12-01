@@ -75,6 +75,7 @@ class DataBase:
         try:
             cursor = conn.cursor()
             cursor.execute(criar_tabela_sql)
+            
 
         except Error as e:
             print("Erro ao criar tabelas")

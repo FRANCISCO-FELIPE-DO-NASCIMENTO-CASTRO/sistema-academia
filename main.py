@@ -1,5 +1,4 @@
-from ntpath import join
-from os import path
+
 # from classes.aluno import Aluno
 from classes.plano import Plano
 from classes.especialidade import Especialidade

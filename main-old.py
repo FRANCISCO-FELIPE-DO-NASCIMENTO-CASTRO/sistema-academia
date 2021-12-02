@@ -1,7 +1,11 @@
 import os
 import sys
 from qt_core import *
-from database.connection import create_connection
+# from database.connection import create_connection
+from models.banco_academia import DataBase
+
+conn = DataBase()
+
 
 from PySide6.QtWidgets import QApplication, QMainWindow
 # Importacao da janela principal
@@ -18,7 +22,7 @@ class JanelaPrincipal(QMainWindow):
         # Importando as configuraçoes da janela principal
         self.ui = Ui_tela_principal()
         self.ui.configuracao(self)
-        conn = create_connection()
+        conn.criar_conexao()
         print(conn)
 
         # Exibe a janela

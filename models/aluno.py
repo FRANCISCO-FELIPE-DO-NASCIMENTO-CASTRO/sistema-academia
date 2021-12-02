@@ -1,4 +1,7 @@
 
+from os import curdir
+import sqlite3
+from sqlite3.dbapi2 import Cursor, Error
 from models.banco_academia import DataBase
 
 class Aluno:
@@ -44,18 +47,61 @@ class Aluno:
         conn = self.database.criar_conexao()
         cursor = conn.cursor()
         cursor.execute('select * from aluno')
-
         linhas = cursor.fetchall()
+        # for linha in linhas:
+        #     return linha
         return linhas
 
+    def buscar(self, aluno):
+        conn = None        
+        try:
+            conn = self.database.criar_conexao()
+            cursor = conn.cursor()        
+            sql = ("select * from aluno where id=?")        
+            cursor.execute(sql,(aluno,))        
+            linhas = cursor.fetchall()
+            cursor.close()
+            conn.close()
+            # for linha in linhas:
+            #     return linha
+            return linhas
+        except Error as e:
+            return conn
+            print("Erro ao buscar por id")
+        
+        
+
+    def atualizar(self, aluno):
+        conn = self.database.criar_conexao()
+        sql = 'update aluno \
+                set nome = ?,\
+                cpf = ?,\
+                sexo = ?,\
+                cep = ?,\
+                endereco = ?,\
+                numero = ?,\
+                complemento = ?,\
+                cidade = ?,\
+                estado = ?,\
+                telefone = ?,\
+                email = ? where id = ?'
+        cursor = conn.cursor()
+        cursor.execute(sql, aluno)
+        conn.commit()
+        cursor.close()
+        conn.close()
 
 
-    def atualizar(self):
-        pass
-
-
-    def deletar(self):
-        pass
+    def deletar(self, id_aluno):        
+        conn = self.database.criar_conexao()        
+        sql = ('delete from aluno where id=?')
+        cursor = conn.cursor()
+        cursor.execute(sql, (id_aluno,))
+        conn.commit()
+        cursor.close()
+        conn.close()
+            
+        
 
 
 

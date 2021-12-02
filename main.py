@@ -8,11 +8,6 @@ from controllers.aluno import Controller
 from controllers.databasecontroller import DataBaseController
 from models.banco_academia import DataBase
 
-
-
-
-
-
 musculacao = Especialidade('Musculação')
 
 instrutor = Instrutor('Paulo Cintura', '014.545.788-78', 2500)
@@ -22,8 +17,8 @@ print(instrutor)
 
 
 
-aluno = Aluno('Francisco Araujo', '017.514.894-78', 'F','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'francisco@hotmail.com', '11220')
-aluno2 = Aluno('Isaac Nunes dos Santos', '017.514.894-78', 'F','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'francisco@hotmail.com', '12221')
+aluno = Aluno('Francisco Araujo', '017.514.894-78', 'F','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'isaac@hotmail.com', '11220')
+aluno2 = Aluno('Isaac Nunes dos Santos', '016.514.000-99', 'M','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'isaac@hotmail.com', '12221')
 aluno3 = Aluno('Maria Rosa', '017.514.894-78', 'F','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'francisco@hotmail.com', '1212121')
 
 plano_smart = Plano('Plano Smart',
@@ -40,30 +35,17 @@ plano_smart.matricular_aluno(aluno3)
 print(plano_smart)
 
 
-
-
-
-
-
-
 def main():
     banco = DataBaseController()
+    banco.criar_banco()
+    banco.criar_tabelas()
     controller = Controller()
     controller.adiciona_aluno(aluno)
     controller.adiciona_aluno(aluno2)
     controller.adiciona_aluno(aluno3)
-    controller.listar_aluno()
-    banco.criar_banco()
-    banco.criar_tabelas()
-    
- 
-    # databaseController.criar_tabelas
-    
-    
-    # controller.criar_banco()
-    # controller.adiciona_aluno(aluno)
-    # controller.adiciona_aluno(aluno2)
-    # controller.listar_clientes()
+    controller.deletar(1)
+    controller.buscar_aluno_por_id(10)
+    controller.listar_aluno()    
 
 if __name__ == '__main__':
     main()

@@ -17,9 +17,9 @@ print(instrutor)
 
 
 
-aluno = Aluno('Francisco Araujo', '017.514.894-78', 'F','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'isaac@hotmail.com', '11220')
-aluno2 = Aluno('Isaac Nunes dos Santos', '016.514.000-99', 'M','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'isaac@hotmail.com', '12221')
-aluno3 = Aluno('Maria Rosa', '017.514.894-78', 'F','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'francisco@hotmail.com', '1212121')
+aluno = Aluno('Francisco dos Anzois', 'Q C', 'Vila Maria', '64060-115','Teresina','Piaui', '869998444', '86 9880045474','M', '01761432389', '11-03-1985','fra@hotmail.com','casado','estudante', 'Solution', 'Emagrecer', 0.0, False)
+# aluno2 = Aluno('Isaac Nunes dos Santos', '016.514.000-99', 'M','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'isaac@hotmail.com', '12221')
+# aluno3 = Aluno('Maria Rosa', '017.514.894-78', 'F','64060-115', 'Q C', '50',' Vila Maria', 'Teresina', 'Piaui', '86-98841-7874', 'francisco@hotmail.com', '1212121')
 
 plano_smart = Plano('Plano Smart',
  'Treine o quanto quiser na sua unidade, sem taxa de cancelamento.',79.90)
@@ -28,8 +28,8 @@ matricula = Matricula(1)
 # matricula.gerar_comprovante()
 
 plano_smart.matricular_aluno(aluno)
-plano_smart.matricular_aluno(aluno2)
-plano_smart.matricular_aluno(aluno3)
+# plano_smart.matricular_aluno(aluno2)
+# plano_smart.matricular_aluno(aluno3)
 
 
 print(plano_smart)
@@ -41,11 +41,11 @@ def main():
     banco.criar_tabelas()
     controller = Controller()
     controller.adiciona_aluno(aluno)
-    controller.adiciona_aluno(aluno2)
-    controller.adiciona_aluno(aluno3)
-    controller.deletar(1)
-    controller.buscar_aluno_por_id(10)
-    controller.listar_aluno()    
+    # controller.adiciona_aluno(aluno2)
+    # controller.adiciona_aluno(aluno3)
+    # controller.deletar(1)
+    # controller.buscar_aluno_por_id(10)
+    # controller.listar_aluno()    
 
 if __name__ == '__main__':
     main()

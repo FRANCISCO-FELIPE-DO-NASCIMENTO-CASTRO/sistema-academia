@@ -8,7 +8,7 @@ class DataBase:
     def tabela_Empresa(self):
         try:
             sql = 'CREATE TABLE IF NOT EXISTS Empresa('\
-                'id integer primary key autoincrement,'\
+                'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                 'razao_social varchar(50),'\
                 'fantasia varchar (50),'\
                 'endereco varchar (50),'\
@@ -20,7 +20,7 @@ class DataBase:
     def tabela_Modalidade(self):
         try:
             sql =   'CREATE TABLE if not exists Modalidade('\
-                    'id INT  NOT NULL PRIMARY KEY autoincrement,'\
+                    'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                     'descricao VARCHAR(50) NOT NULL,'\
                     'valor REAl NOT NULL)'
             return sql
@@ -30,7 +30,7 @@ class DataBase:
     def tabela_Pagamento(self):
         try:
             sql = 'CREATE TABLE if not exists Pagamento ('\
-                'id INT  NOT NULL PRIMARY KEY,'\
+                'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                 'id_matricula INT NOT NULL,'\
                 'valor DOUBLE NOT NULL,'\
                 'dataPagamento DATE,'\
@@ -43,7 +43,7 @@ class DataBase:
     def tabela_Antopometria(self):
         try:
             sql ='CREATE TABLE if not exists Antopometria ('\
-                'id INT  NOT NULL PRIMARY KEY,'\
+                'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                 'antopometriaPescoco REAl,'\
                 'antopometriaToraxica REAl,'\
                 'antopometriaCintura REAl,'\
@@ -62,7 +62,7 @@ class DataBase:
     def tabela_DobraCultanea(self):
         try:
             sql = 'CREATE TABLE if not exists DobraCultanea ('\
-                'id INT  NOT NULL PRIMARY KEY,'\
+                'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                 'dobraCultaneaSubEscapular REAl,'\
                 'dobraCultaneaTriceps REAl,'\
                 'dobraCultaneaBiceps REAl,'\
@@ -82,7 +82,7 @@ class DataBase:
     def tabela_Diametro(self):
         try:
             sql =   'CREATE TABLE if not exists Diametro ('\
-                    'id INT  NOT NULL PRIMARY KEY,'\
+                    'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                     'diametroRadioUlnar REAl,'\
                     'diametroUmeral REAl,'\
                     'diametroBiacromial REAl,'\
@@ -101,7 +101,7 @@ class DataBase:
     def tabela_Circuferencia(self):
         try:
             sql =   'CREATE TABLE if not exists Circuferencia ('\
-                    'id INT  NOT NULL PRIMARY KEY,'\
+                    'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                     'circuferenciaGlutea REAl,'\
                     'circuferenciaPanturrilha REAl,'\
                     'circuferenciaMaleolar REAl,'\
@@ -115,7 +115,7 @@ class DataBase:
     def tabela_AvaliacaoFisica(self):
         try:
             sql =   'CREATE TABLE if not exists AvaliacaoFisica ('\
-                    'id INT  NOT NULL PRIMARY KEY,'\
+                    'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                     'id_aluno NULL,'\
                     'avaliador VARCHAR(50),'\
                     'data DATE,'\
@@ -141,7 +141,7 @@ class DataBase:
     def tabela_Frequencia(self):
         try:
             sql =   'CREATE TABLE if not exists Frequencia  ('\
-                    'id INT  NOT NULL PRIMARY KEY,'\
+                    'id INTEGER PRIMARY KEY autoincrement,'\
                     'id_aluno INT NULL,'\
                     'dataEntrada DATE NOT NULL,'\
                     'dataSaida DATE NOT NULL,'\
@@ -153,7 +153,7 @@ class DataBase:
     def tabela_Aluno(self):
         try:
             sql =   'CREATE TABLE if not exists Aluno ('\
-                    'id INT  NOT NULL PRIMARY KEY,'\
+                    'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                     'nome VARCHAR(50) NOT NULL,'\
                     'endereco VARCHAR(50) NOT NULL,'\
                     'bairro VARCHAR(50) NOT NULL,'\
@@ -179,7 +179,7 @@ class DataBase:
     def tabela_Funcao(self):
         try:
             sql =   'CREATE TABLE if not exists Funcao ('\
-                    'id INT  NOT NULL PRIMARY KEY,'\
+                    'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                     'descricao VARCHAR(50) NOT NULL)'
             return sql
         except Error as error:
@@ -188,7 +188,7 @@ class DataBase:
     def tabela_Funcionario(self):
         try:
             sql =   'CREATE TABLE if not exists Funcionario ('\
-                    'id INT  NOT NULL PRIMARY KEY,'\
+                    'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                     'id_funcao INT NOT NULL,'\
                     'nome VARCHAR(50) NOT NULL,'\
                     'endereco VARCHAR(50) NOT NULL,'\
@@ -216,7 +216,7 @@ class DataBase:
     def tabela_FichaTreino(self):
         try:
             sql =   'CREATE TABLE if not exists FichaTreino ('\
-                    'id INT  NOT NULL PRIMARY KEY,'\
+                    'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                     'id_aluno NULL,'\
                     'nome VARCHAR (50) NOT NULL,'\
                     'data DATE NOT NULL,'\
@@ -240,7 +240,7 @@ class DataBase:
     def tabela_Matricula(self):
         try:
             sql = 'CREATE TABLE IF NOT EXISTS Matricula ('\
-                    'id INT  NOT NULL PRIMARY KEY,'\
+                    'id INTEGER PRIMARY KEY AUTOINCREMENT,'\
                     'id_aluno integer NULL,'\
                     'id_empresa integer not null,'\
                     'id_modalidade INT NOT NULL,'\

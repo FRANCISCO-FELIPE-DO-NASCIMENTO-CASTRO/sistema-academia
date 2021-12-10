@@ -1,13 +1,16 @@
 class Modalidade:
-    def __init__(self, id, modalidade, valor):
-        self.__id = id
-        self.__modalidade = modalidade
+    def __init__(self, descricao, valor):
+        self.__descricao = descricao
         self.__valor = valor
 
     @property
-    def modalidade(self):
-        return self.__modalidade
+    def descricao(self):
+        return self.__descricao
+
+    @property
+    def valor(self):
+        return self.__valor
 
     
     def __str__(self):
-        return self.modalidade
+        return self.__descricao

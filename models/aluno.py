@@ -68,8 +68,6 @@ class Aluno:
         except Error as e:
             return conn
             print("Erro ao buscar por id")
-        
-        
 
     def atualizar(self, aluno):
         conn = self.database.criar_conexao()

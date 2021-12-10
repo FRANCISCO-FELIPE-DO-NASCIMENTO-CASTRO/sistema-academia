@@ -11,7 +11,8 @@ class Controller:
     def adiciona_aluno(self, aluno):        
         self.model.salvar(aluno)
 
-    def listar_aluno(self):        
+    def listar_aluno(self):
+        self.model.buscar()        
         self.view.listar_alunos()
 
     def buscar_aluno_por_id(self, aluno_id):

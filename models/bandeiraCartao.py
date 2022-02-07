@@ -51,8 +51,8 @@ class Aluno:
         cursor = conn.cursor()
         cursor.execute('select * from aluno')
         linhas = cursor.fetchall()
-        for linha in linhas:
-            return linha
+        # for linha in linhas:
+        #     return linha
         return linhas
 
     def buscar(self, aluno):

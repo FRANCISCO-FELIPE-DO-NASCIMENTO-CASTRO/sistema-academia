@@ -1,5 +1,7 @@
 
 import datetime
+from email.policy import default
+from enum import unique
 import sys
 sys.path.append("..")
 import banco
@@ -28,18 +30,17 @@ class Aluno(BaseModel):
     status = BooleanField(default=True)
 
 class Plano(BaseModel):
-    descricao = CharField(max_length=50)
+    descricao = CharField(max_length=50, unique=True)
     taxa_adesao = FloatField(default=0.0)
     mensalidade = FloatField()
     taxaManutencao = FloatField(default=0.0)
 
 
 class Matricula(BaseModel):
-    matricula = AutoField()
     aluno = ForeignKeyField(Aluno, backref='alunos')
     plano = ForeignKeyField(Plano, backref='planos')
-    data_matricula = DateField(datetime.datetime.now())
-    IntegerField
+    data_matricula = DateField(default=None)
+   
     
 
 

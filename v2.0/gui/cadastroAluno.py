@@ -64,8 +64,8 @@ class TelaAluno:
                 ]
                        
                 # , background_color="#e9e9e9"
-                janela = sg.Window('Cadastro de Cliente', size=(960 ,540), margins=(150,70),default_element_size=(12, 1),layout=layout, background_color="#F2F5FA ", finalize=True)
-                janela.set_min_size((960, 540))
+                janela = sg.Window('Cadastro de Cliente', size=(800 ,540), margins=(150,70),default_element_size=(12, 1),layout=layout, background_color="#F2F5FA ", finalize=True)
+                janela.set_min_size((800, 540))
                
         
 

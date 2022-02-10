@@ -1,12 +1,11 @@
 import PySimpleGUI as sg
 import sys
 sys.path.append('..')
-import models
-
+import gui
 from gui.cadastroAluno import TelaAluno
 from gui.cadastroPlano import TelaPlano
 from gui.telaMatricula import TelaMatricula
-from models.model import Plano
+
 
 
 academia = {'BACKGROUND': '#F2F5FA',
@@ -37,8 +36,8 @@ class TelaPrincipal:
 
         # ------ Menu Definition ------ #
         menu_def = [
-                    ['&Cadastro', ['&Alunos', 'Planos']],
-                    ['&Matricula', ['Matricula']],
+                    ['&Cadastro', ['&Alunos', '&Planos']],
+                    ['&Matricula', ['&Matricula']],
                     ['&Relatorios', ['Vendas']]                   
                 ]
 
@@ -51,8 +50,8 @@ class TelaPrincipal:
             
         ]
         # "#1B8EF2"
-        self.janela = sg.Window('Tela Principal', size=(800 ,580), default_element_size=(50, 1), resizable=True, layout=layout, finalize=True)
-        self.janela.set_min_size((800 ,580))
+        self.janela = sg.Window('Tela Principal', size=(960 ,540), default_element_size=(50, 1), resizable=True, layout=layout, finalize=True)
+        self.janela.set_min_size((960 ,540))
         # self.janela.Maximize()
 
 
@@ -62,7 +61,6 @@ tela = TelaPrincipal()
 aluno = TelaAluno()
 plano = TelaPlano()
 matricula = TelaMatricula()
-plano = Plano()
 janelaPrincipal, janelaAluno, tlplano, tlmatricula, tlPlano = tela.principal(), None, None, None, None
 
 

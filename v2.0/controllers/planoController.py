@@ -1,8 +1,13 @@
-from PySimpleGUI.PySimpleGUI import Pane
-from model import Plano
+import sys
+sys.path.append('..')
+import models
+from models.model import Plano
+
+
 class PlanoController:
     def __init__(self):
         self.plano = Plano()
+
     def salvar(self, descricao, adesao, mensalidade, manuntencao):
         self.plano.create(
             descricao=descricao,
@@ -11,6 +16,12 @@ class PlanoController:
             taxaManutencao = manuntencao
         )
         print('Salvo com sucesso')
+
+    
+    def listaDePlanos():
+        planos = Plano.select().get()
+        print(type(planos))
+        return planos
 
         
         
